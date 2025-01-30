@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "TickBitmap",
+  "sourceName": "@uniswap/v3-core/contracts/libraries/TickBitmap.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea264697066735822122038559927f9b76f10720dfd24b88cb461e6ee58d10f02bdab7baebe02b4a17c9a64736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea264697066735822122038559927f9b76f10720dfd24b88cb461e6ee58d10f02bdab7baebe02b4a17c9a64736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

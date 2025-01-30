@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "SafeERC20Namer",
+  "sourceName": "@uniswap/lib/contracts/libraries/SafeERC20Namer.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea26469706673582212207e21a4852b7ba5c533a7e1ff929bc1dd6ab521d6605aa55fe8d71a0329e12d7d64736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea26469706673582212207e21a4852b7ba5c533a7e1ff929bc1dd6ab521d6605aa55fe8d71a0329e12d7d64736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

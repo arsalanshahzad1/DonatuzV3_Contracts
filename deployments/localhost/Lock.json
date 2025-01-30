@@ -1,0 +1,126 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "payable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "when",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdrawal",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "unlockTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x898858855cd305d40fa34e5e62acceeb560843ea2bcbb108472363a75da1a1fa",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "transactionIndex": 0,
+    "gasUsed": "195845",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x95798f66be64fba29f28519b82598ea8c3d8a1b48407c33ea699db52fc6280e2",
+    "transactionHash": "0x898858855cd305d40fa34e5e62acceeb560843ea2bcbb108472363a75da1a1fa",
+    "logs": [],
+    "blockNumber": 18404337,
+    "cumulativeGasUsed": "195845",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "532fae96ca111d0c3bf291eb1ab2cf92",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.28+commit.7893614a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"payable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"when\",\"type\":\"uint256\"}],\"name\":\"Withdrawal\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unlockTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Lock.sol\":\"Lock\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"src/Lock.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity 0.8.28;\\n\\n// Uncomment this line to use console.log\\n// import \\\"hardhat/console.sol\\\";\\n\\ncontract Lock {\\n    uint public unlockTime;\\n    address payable public owner;\\n\\n    event Withdrawal(uint amount, uint when);\\n\\n    constructor() payable {\\n      \\n\\n        unlockTime = (block.timestamp + 60000);\\n        owner = payable(msg.sender);\\n    }\\n\\n    function withdraw() public {\\n        // Uncomment this line, and the import of \\\"hardhat/console.sol\\\", to print a log in your terminal\\n        // console.log(\\\"Unlock time is %o and block timestamp is %o\\\", unlockTime, block.timestamp);\\n\\n        require(block.timestamp >= unlockTime, \\\"You can't withdraw yet\\\");\\n        require(msg.sender == owner, \\\"You aren't the owner\\\");\\n\\n        emit Withdrawal(address(this).balance, block.timestamp);\\n\\n        owner.transfer(address(this).balance);\\n    }\\n}\\n\",\"keccak256\":\"0xae6e598628d3a5e3f5ed521a75293ee2e7f2c74ec66ac223aa752b2c823f2145\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x60808060405261ea604201804211603157600055600180546001600160a01b031916331790556101c490816100488239f35b634e487b7160e01b600052601160045260246000fdfe608080604052600436101561001357600080fd5b60003560e01c908163251c1aa314610173575080633ccfd60b1461006e57638da5cb5b1461004057600080fd5b34610069576000366003190112610069576001546040516001600160a01b039091168152602090f35b600080fd5b34610069576000366003190112610069576000544210610135576001546001600160a01b0316338190036100f9576000808080937fbf2ed60bd5b5965d685680c01195c9514e4382e28e3a5a2d2d5244bf59411b936040478151908152426020820152a147908282156100f0575bf1156100e457005b6040513d6000823e3d90fd5b506108fc6100dc565b60405162461bcd60e51b81526020600482015260146024820152732cb7ba9030b932b713ba103a34329037bbb732b960611b6044820152606490fd5b60405162461bcd60e51b8152602060048201526016602482015275165bdd4818d85b89dd081dda5d1a191c985dc81e595d60521b6044820152606490fd5b34610069576000366003190112610069576020906000548152f3fea264697066735822122064661891ae1096fa01c57aec201846635a2303e41b84b36dbf8251c47d243e4e64736f6c634300081c0033",
+  "deployedBytecode": "0x608080604052600436101561001357600080fd5b60003560e01c908163251c1aa314610173575080633ccfd60b1461006e57638da5cb5b1461004057600080fd5b34610069576000366003190112610069576001546040516001600160a01b039091168152602090f35b600080fd5b34610069576000366003190112610069576000544210610135576001546001600160a01b0316338190036100f9576000808080937fbf2ed60bd5b5965d685680c01195c9514e4382e28e3a5a2d2d5244bf59411b936040478151908152426020820152a147908282156100f0575bf1156100e457005b6040513d6000823e3d90fd5b506108fc6100dc565b60405162461bcd60e51b81526020600482015260146024820152732cb7ba9030b932b713ba103a34329037bbb732b960611b6044820152606490fd5b60405162461bcd60e51b8152602060048201526016602482015275165bdd4818d85b89dd081dda5d1a191c985dc81e595d60521b6044820152606490fd5b34610069576000366003190112610069576020906000548152f3fea264697066735822122064661891ae1096fa01c57aec201846635a2303e41b84b36dbf8251c47d243e4e64736f6c634300081c0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 14255,
+        "contract": "src/Lock.sol:Lock",
+        "label": "unlockTime",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 14257,
+        "contract": "src/Lock.sol:Lock",
+        "label": "owner",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address_payable"
+      }
+    ],
+    "types": {
+      "t_address_payable": {
+        "encoding": "inplace",
+        "label": "address payable",
+        "numberOfBytes": "20"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

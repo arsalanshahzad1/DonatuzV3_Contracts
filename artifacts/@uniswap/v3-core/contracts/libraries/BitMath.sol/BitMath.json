@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "BitMath",
+  "sourceName": "@uniswap/v3-core/contracts/libraries/BitMath.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea2646970667358221220577cec603ab95e2b32f04943df303d3caf098a0de22639766ab07093f0e2be7664736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea2646970667358221220577cec603ab95e2b32f04943df303d3caf098a0de22639766ab07093f0e2be7664736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

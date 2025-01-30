@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ChainId",
+  "sourceName": "@uniswap/v3-periphery/contracts/libraries/ChainId.sol",
+  "abi": [],
+  "bytecode": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea26469706673582212209e5a114d2c05bac613da1d41a66646e6f321dcd93b371f3f3363083b7a6939ba64736f6c634300081c0033",
+  "deployedBytecode": "0x600080fdfea26469706673582212209e5a114d2c05bac613da1d41a66646e6f321dcd93b371f3f3363083b7a6939ba64736f6c634300081c0033",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
